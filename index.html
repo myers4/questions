@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title></title>
+      <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+      <script>
+        $(document).ready(function(){
+
+          $("h1").click(function(){
+
+            var answer = prompt("Where is Times Square?");
+              console.log(answer);
+
+            var newQuestion = "But how do I get to " + answer + "?";
+              console.log(newQuestion);
+              $("h2").html(newQuestion);
+
+
+              $("h2").click(function(){
+
+                var aggressive = prompt("Where is " + answer + "???");
+                  console.log(aggressive);
+
+                var response = "Could you show me " + aggressive + " on this map?";
+                    console.log(response);
+                    $("h3").html(response);
+
+            
+
+              });
+
+
+            });
+
+      });
+
+      </script>
+      <style>
+      </style>
+    </head>
+    <body>
+      <h1>Howdy!</h1>
+      <h2></h2>
+      <h3></h3>
+      <h4></h4>
+      <h5></h5>
+      <h6></h6>
+    </body>
+  </html>
