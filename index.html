@@ -25,17 +25,35 @@
                     console.log(response);
                     $("h3").html(response);
 
-            
+                      $("h3").click(function(){
+                        var map = confirm("Could you show me " + aggressive + " on this map?");
+                        console.log(map);
 
+                          if(map === true){
+                            console.log("picture of a map");
+                            $("h5").removeClass("invisible");
+                            $("h5").html(map);
+                          }else{
+                            console.log("New Yorkers are so rude");
+                            $("h6").html("New Yorkers are so rude");
+                          }
+
+                    });
               });
-
-
             });
-
       });
 
       </script>
       <style>
+        h5{
+          background-image:url("europelarge.jpg");
+          background-repeat:no-repeat;
+          width:1000px;
+          height:1000px;
+        }
+        .invisible{
+          display:none;
+        }
       </style>
     </head>
     <body>
@@ -43,7 +61,7 @@
       <h2></h2>
       <h3></h3>
       <h4></h4>
-      <h5></h5>
+      <h5 class = "invisible"></h5>
       <h6></h6>
     </body>
   </html>
